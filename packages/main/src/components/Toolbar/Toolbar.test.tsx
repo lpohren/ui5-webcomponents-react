@@ -23,7 +23,7 @@ describe('Toolbar', () => {
         </Toolbar>
       ).asFragment()
     ).toMatchSnapshot();
-    expect(screen.getByText('Item1').textContent).toEqual('Item1');
+    expect(screen.getAllByText('Item1')[0].textContent).toEqual('Item1');
     expect(screen.getByTestId('toolbar')).toHaveClass('Toolbar-active');
   });
 
@@ -39,7 +39,7 @@ describe('Toolbar', () => {
         </Toolbar>
       ).asFragment()
     ).toMatchSnapshot();
-    expect(screen.getByText('Item1').textContent).toEqual('Item1');
+    expect(screen.getAllByText('Item1')[0].textContent).toEqual('Item1');
     expect(screen.getByTestId('toolbar')).toHaveClass('Toolbar-active');
   });
 
@@ -69,14 +69,13 @@ describe('Toolbar', () => {
       </Toolbar>
     );
 
-    expect(getByLabelText('Separator')).toHaveClass('ToolbarSeparator-separator');
+    expect(screen.getAllByLabelText('Separator')[0]).toHaveClass('ToolbarSeparator-separator');
+    expect(screen.getAllByLabelText('Separator')[1]).toHaveClass('ToolbarSeparator-separator');
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test('overflow menu', () => {
-    jest.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => cb());
-
     HTMLElement.prototype.getBoundingClientRect = jest.fn(function () {
       return {
         width: parseFloat(getComputedStyle(this).width || 200),

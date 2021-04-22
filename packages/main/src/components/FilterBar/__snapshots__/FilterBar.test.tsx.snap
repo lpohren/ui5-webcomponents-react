@@ -6,7 +6,7 @@ exports[`FilterBar Render without crashing - default props 1`] = `
     class="FilterBar-outerContainer"
   >
     <div
-      class="Toolbar-outerContainer Toolbar-clear FilterBar-filterBarHeader"
+      class="Toolbar-outerContainer Toolbar-clear FilterBar-filterBarHeader Toolbar-hasOverflow"
     >
       <div
         class="Toolbar-toolbar"
@@ -15,7 +15,9 @@ exports[`FilterBar Render without crashing - default props 1`] = `
           class="spacer"
           style="flex-grow: 1;"
         />
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <ui5-button
             class="FilterBar-showFiltersBtn"
             design="Transparent"
@@ -24,6 +26,16 @@ exports[`FilterBar Render without crashing - default props 1`] = `
             Hide Filter Bar
           </ui5-button>
         </div>
+      </div>
+      <div
+        class="Toolbar-overflowButtonContainer"
+        title="Show More"
+      >
+        <ui5-togglebutton
+          design="Transparent"
+          icon="overflow"
+          ui5-togglebutton=""
+        />
       </div>
     </div>
     <div
@@ -84,12 +96,14 @@ exports[`FilterBar Render without crashing - w/ filter dialog 1`] = `
     class="FilterBar-outerContainer FilterBar-filterItemExpand"
   >
     <div
-      class="Toolbar-outerContainer Toolbar-clear FilterBar-filterBarHeader"
+      class="Toolbar-outerContainer Toolbar-clear FilterBar-filterBarHeader Toolbar-hasOverflow"
     >
       <div
         class="Toolbar-toolbar"
       >
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <div
             class="VariantManagement-container"
           >
@@ -107,13 +121,17 @@ exports[`FilterBar Render without crashing - w/ filter dialog 1`] = `
             />
           </div>
         </div>
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <div
             aria-label="Separator"
             class="ToolbarSeparator-separator"
           />
         </div>
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <div>
             <ui5-input
               placeholder="Search"
@@ -127,7 +145,9 @@ exports[`FilterBar Render without crashing - w/ filter dialog 1`] = `
           class="spacer"
           style="flex-grow: 1;"
         />
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <ui5-button
             design="Transparent"
             ui5-button=""
@@ -135,7 +155,9 @@ exports[`FilterBar Render without crashing - w/ filter dialog 1`] = `
             Clear
           </ui5-button>
         </div>
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <ui5-button
             design="Transparent"
             ui5-button=""
@@ -143,7 +165,9 @@ exports[`FilterBar Render without crashing - w/ filter dialog 1`] = `
             Restore
           </ui5-button>
         </div>
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <ui5-button
             class="FilterBar-showFiltersBtn"
             design="Transparent"
@@ -152,7 +176,9 @@ exports[`FilterBar Render without crashing - w/ filter dialog 1`] = `
             Hide Filter Bar
           </ui5-button>
         </div>
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <ui5-button
             design="Default"
             ui5-button=""
@@ -160,7 +186,9 @@ exports[`FilterBar Render without crashing - w/ filter dialog 1`] = `
             Filters (1337)
           </ui5-button>
         </div>
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <ui5-button
             design="Emphasized"
             ui5-button=""
@@ -168,6 +196,16 @@ exports[`FilterBar Render without crashing - w/ filter dialog 1`] = `
             Go
           </ui5-button>
         </div>
+      </div>
+      <div
+        class="Toolbar-overflowButtonContainer"
+        title="Show More"
+      >
+        <ui5-togglebutton
+          design="Transparent"
+          icon="overflow"
+          ui5-togglebutton=""
+        />
       </div>
     </div>
     <div
@@ -442,7 +480,7 @@ exports[`FilterBar Toggle FilterBar filters 1`] = `
     class="FilterBar-outerContainer"
   >
     <div
-      class="Toolbar-outerContainer Toolbar-clear FilterBar-filterBarHeader"
+      class="Toolbar-outerContainer Toolbar-clear FilterBar-filterBarHeader Toolbar-hasOverflow"
     >
       <div
         class="Toolbar-toolbar"
@@ -451,7 +489,9 @@ exports[`FilterBar Toggle FilterBar filters 1`] = `
           class="spacer"
           style="flex-grow: 1;"
         />
-        <div>
+        <div
+          style="visibility: hidden;"
+        >
           <ui5-button
             class="FilterBar-showFiltersBtn"
             design="Transparent"
@@ -460,6 +500,16 @@ exports[`FilterBar Toggle FilterBar filters 1`] = `
             Show Filter Bar
           </ui5-button>
         </div>
+      </div>
+      <div
+        class="Toolbar-overflowButtonContainer"
+        title="Show More"
+      >
+        <ui5-togglebutton
+          design="Transparent"
+          icon="overflow"
+          ui5-togglebutton=""
+        />
       </div>
     </div>
     <div

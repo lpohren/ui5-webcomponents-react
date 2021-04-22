@@ -3,33 +3,49 @@
 exports[`Toolbar Renders with children 1`] = `
 <DocumentFragment>
   <div
-    class="Toolbar-outerContainer Toolbar-active"
+    class="Toolbar-outerContainer Toolbar-active Toolbar-hasOverflow"
     data-testid="toolbar"
   >
     <div
       class="Toolbar-toolbar"
     >
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item1
         </span>
       </div>
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item2
         </span>
       </div>
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item3
         </span>
       </div>
+    </div>
+    <div
+      class="Toolbar-overflowButtonContainer"
+      title="Show More"
+    >
+      <ui5-togglebutton
+        design="Transparent"
+        icon="overflow"
+        ui5-togglebutton=""
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -38,33 +54,49 @@ exports[`Toolbar Renders with children 1`] = `
 exports[`Toolbar Renders with children as react fragments 1`] = `
 <DocumentFragment>
   <div
-    class="Toolbar-outerContainer Toolbar-active"
+    class="Toolbar-outerContainer Toolbar-active Toolbar-hasOverflow"
     data-testid="toolbar"
   >
     <div
       class="Toolbar-toolbar"
     >
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item1
         </span>
       </div>
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item2
         </span>
       </div>
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item3
         </span>
       </div>
+    </div>
+    <div
+      class="Toolbar-overflowButtonContainer"
+      title="Show More"
+    >
+      <ui5-togglebutton
+        design="Transparent"
+        icon="overflow"
+        ui5-togglebutton=""
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -85,39 +117,57 @@ exports[`Toolbar Renders with default Props 1`] = `
 exports[`Toolbar ToolbarSeparator 1`] = `
 <DocumentFragment>
   <div
-    class="Toolbar-outerContainer"
+    class="Toolbar-outerContainer Toolbar-hasOverflow"
     data-testid="toolbar"
   >
     <div
       class="Toolbar-toolbar"
     >
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item1
         </span>
       </div>
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <div
           aria-label="Separator"
           class="ToolbarSeparator-separator"
         />
       </div>
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item2
         </span>
       </div>
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item3
         </span>
       </div>
+    </div>
+    <div
+      class="Toolbar-overflowButtonContainer"
+      title="Show More"
+    >
+      <ui5-togglebutton
+        design="Transparent"
+        icon="overflow"
+        ui5-togglebutton=""
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -126,13 +176,15 @@ exports[`Toolbar ToolbarSeparator 1`] = `
 exports[`Toolbar ToolbarSpacer 1`] = `
 <DocumentFragment>
   <div
-    class="Toolbar-outerContainer"
+    class="Toolbar-outerContainer Toolbar-hasOverflow"
     data-testid="toolbar"
   >
     <div
       class="Toolbar-toolbar"
     >
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
@@ -143,20 +195,34 @@ exports[`Toolbar ToolbarSpacer 1`] = `
         class="spacer"
         style="flex-grow: 1;"
       />
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item2
         </span>
       </div>
-      <div>
+      <div
+        style="visibility: hidden;"
+      >
         <span
           class="Text-text"
         >
           Item3
         </span>
       </div>
+    </div>
+    <div
+      class="Toolbar-overflowButtonContainer"
+      title="Show More"
+    >
+      <ui5-togglebutton
+        design="Transparent"
+        icon="overflow"
+        ui5-togglebutton=""
+      />
     </div>
   </div>
 </DocumentFragment>

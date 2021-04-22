@@ -137,12 +137,14 @@ exports[`DynamicPage always show content header 1`] = `
             class="DynamicPageTitle-content"
           >
             <div
-              class="Toolbar-outerContainer Toolbar-clear"
+              class="Toolbar-outerContainer Toolbar-clear Toolbar-hasOverflow"
             >
               <div
                 class="Toolbar-toolbar"
               >
-                <div>
+                <div
+                  style="visibility: hidden;"
+                >
                   <ui5-badge
                     color-scheme="1"
                     ui5-badge=""
@@ -151,11 +153,21 @@ exports[`DynamicPage always show content header 1`] = `
                   </ui5-badge>
                 </div>
               </div>
+              <div
+                class="Toolbar-overflowButtonContainer"
+                title="Show More"
+              >
+                <ui5-togglebutton
+                  design="Transparent"
+                  icon="overflow"
+                  ui5-togglebutton=""
+                />
+              </div>
             </div>
           </div>
         </div>
         <div
-          class="Toolbar-outerContainer Toolbar-clear"
+          class="Toolbar-outerContainer Toolbar-clear Toolbar-hasOverflow"
         >
           <div
             class="Toolbar-toolbar"
@@ -164,7 +176,9 @@ exports[`DynamicPage always show content header 1`] = `
               class="spacer"
               style="flex-grow: 1;"
             />
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Emphasized"
                 ui5-button=""
@@ -172,7 +186,9 @@ exports[`DynamicPage always show content header 1`] = `
                 Edit
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -180,7 +196,9 @@ exports[`DynamicPage always show content header 1`] = `
                 Delete
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -188,7 +206,9 @@ exports[`DynamicPage always show content header 1`] = `
                 Copy
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -196,40 +216,60 @@ exports[`DynamicPage always show content header 1`] = `
                 Toggle Footer
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="action"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <div
                 aria-label="Separator"
                 class="ToolbarSeparator-separator"
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="full-screen"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="exit-full-screen"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="decline"
                 ui5-button=""
               />
             </div>
+          </div>
+          <div
+            class="Toolbar-overflowButtonContainer"
+            title="Show More"
+          >
+            <ui5-togglebutton
+              design="Transparent"
+              icon="overflow"
+              ui5-togglebutton=""
+            />
           </div>
         </div>
       </div>
@@ -458,12 +498,14 @@ exports[`DynamicPage hider header button 1`] = `
             class="DynamicPageTitle-content"
           >
             <div
-              class="Toolbar-outerContainer Toolbar-clear"
+              class="Toolbar-outerContainer Toolbar-clear Toolbar-hasOverflow"
             >
               <div
                 class="Toolbar-toolbar"
               >
-                <div>
+                <div
+                  style="visibility: hidden;"
+                >
                   <ui5-badge
                     color-scheme="1"
                     ui5-badge=""
@@ -472,11 +514,21 @@ exports[`DynamicPage hider header button 1`] = `
                   </ui5-badge>
                 </div>
               </div>
+              <div
+                class="Toolbar-overflowButtonContainer"
+                title="Show More"
+              >
+                <ui5-togglebutton
+                  design="Transparent"
+                  icon="overflow"
+                  ui5-togglebutton=""
+                />
+              </div>
             </div>
           </div>
         </div>
         <div
-          class="Toolbar-outerContainer Toolbar-clear"
+          class="Toolbar-outerContainer Toolbar-clear Toolbar-hasOverflow"
         >
           <div
             class="Toolbar-toolbar"
@@ -485,7 +537,9 @@ exports[`DynamicPage hider header button 1`] = `
               class="spacer"
               style="flex-grow: 1;"
             />
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Emphasized"
                 ui5-button=""
@@ -493,7 +547,9 @@ exports[`DynamicPage hider header button 1`] = `
                 Edit
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -501,7 +557,9 @@ exports[`DynamicPage hider header button 1`] = `
                 Delete
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -509,7 +567,9 @@ exports[`DynamicPage hider header button 1`] = `
                 Copy
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -517,40 +577,60 @@ exports[`DynamicPage hider header button 1`] = `
                 Toggle Footer
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="action"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <div
                 aria-label="Separator"
                 class="ToolbarSeparator-separator"
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="full-screen"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="exit-full-screen"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="decline"
                 ui5-button=""
               />
             </div>
+          </div>
+          <div
+            class="Toolbar-overflowButtonContainer"
+            title="Show More"
+          >
+            <ui5-togglebutton
+              design="Transparent"
+              icon="overflow"
+              ui5-togglebutton=""
+            />
           </div>
         </div>
       </div>
@@ -934,12 +1014,14 @@ exports[`DynamicPage with content 1`] = `
             class="DynamicPageTitle-content"
           >
             <div
-              class="Toolbar-outerContainer Toolbar-clear"
+              class="Toolbar-outerContainer Toolbar-clear Toolbar-hasOverflow"
             >
               <div
                 class="Toolbar-toolbar"
               >
-                <div>
+                <div
+                  style="visibility: hidden;"
+                >
                   <ui5-badge
                     color-scheme="1"
                     ui5-badge=""
@@ -948,11 +1030,21 @@ exports[`DynamicPage with content 1`] = `
                   </ui5-badge>
                 </div>
               </div>
+              <div
+                class="Toolbar-overflowButtonContainer"
+                title="Show More"
+              >
+                <ui5-togglebutton
+                  design="Transparent"
+                  icon="overflow"
+                  ui5-togglebutton=""
+                />
+              </div>
             </div>
           </div>
         </div>
         <div
-          class="Toolbar-outerContainer Toolbar-clear"
+          class="Toolbar-outerContainer Toolbar-clear Toolbar-hasOverflow"
         >
           <div
             class="Toolbar-toolbar"
@@ -961,7 +1053,9 @@ exports[`DynamicPage with content 1`] = `
               class="spacer"
               style="flex-grow: 1;"
             />
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Emphasized"
                 ui5-button=""
@@ -969,7 +1063,9 @@ exports[`DynamicPage with content 1`] = `
                 Edit
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -977,7 +1073,9 @@ exports[`DynamicPage with content 1`] = `
                 Delete
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -985,7 +1083,9 @@ exports[`DynamicPage with content 1`] = `
                 Copy
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -993,40 +1093,60 @@ exports[`DynamicPage with content 1`] = `
                 Toggle Footer
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="action"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <div
                 aria-label="Separator"
                 class="ToolbarSeparator-separator"
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="full-screen"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="exit-full-screen"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="decline"
                 ui5-button=""
               />
             </div>
+          </div>
+          <div
+            class="Toolbar-overflowButtonContainer"
+            title="Show More"
+          >
+            <ui5-togglebutton
+              design="Transparent"
+              icon="overflow"
+              ui5-togglebutton=""
+            />
           </div>
         </div>
       </div>
@@ -1911,12 +2031,14 @@ exports[`DynamicPage without content 1`] = `
             class="DynamicPageTitle-content"
           >
             <div
-              class="Toolbar-outerContainer Toolbar-clear"
+              class="Toolbar-outerContainer Toolbar-clear Toolbar-hasOverflow"
             >
               <div
                 class="Toolbar-toolbar"
               >
-                <div>
+                <div
+                  style="visibility: hidden;"
+                >
                   <ui5-badge
                     color-scheme="1"
                     ui5-badge=""
@@ -1925,11 +2047,21 @@ exports[`DynamicPage without content 1`] = `
                   </ui5-badge>
                 </div>
               </div>
+              <div
+                class="Toolbar-overflowButtonContainer"
+                title="Show More"
+              >
+                <ui5-togglebutton
+                  design="Transparent"
+                  icon="overflow"
+                  ui5-togglebutton=""
+                />
+              </div>
             </div>
           </div>
         </div>
         <div
-          class="Toolbar-outerContainer Toolbar-clear"
+          class="Toolbar-outerContainer Toolbar-clear Toolbar-hasOverflow"
         >
           <div
             class="Toolbar-toolbar"
@@ -1938,7 +2070,9 @@ exports[`DynamicPage without content 1`] = `
               class="spacer"
               style="flex-grow: 1;"
             />
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Emphasized"
                 ui5-button=""
@@ -1946,7 +2080,9 @@ exports[`DynamicPage without content 1`] = `
                 Edit
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -1954,7 +2090,9 @@ exports[`DynamicPage without content 1`] = `
                 Delete
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -1962,7 +2100,9 @@ exports[`DynamicPage without content 1`] = `
                 Copy
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 ui5-button=""
@@ -1970,40 +2110,60 @@ exports[`DynamicPage without content 1`] = `
                 Toggle Footer
               </ui5-button>
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="action"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <div
                 aria-label="Separator"
                 class="ToolbarSeparator-separator"
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="full-screen"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="exit-full-screen"
                 ui5-button=""
               />
             </div>
-            <div>
+            <div
+              style="visibility: hidden;"
+            >
               <ui5-button
                 design="Transparent"
                 icon="decline"
                 ui5-button=""
               />
             </div>
+          </div>
+          <div
+            class="Toolbar-overflowButtonContainer"
+            title="Show More"
+          >
+            <ui5-togglebutton
+              design="Transparent"
+              icon="overflow"
+              ui5-togglebutton=""
+            />
           </div>
         </div>
       </div>

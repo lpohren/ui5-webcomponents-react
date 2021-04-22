@@ -119,7 +119,7 @@ describe('FilterBar', () => {
   });
 
   it('Toggle FilterBar filters', () => {
-    const { asFragment, rerender } = render(
+    const { asFragment, rerender, getByVisibleText } = render(
       <FilterBar>
         <FilterGroupItem label="Classification" key="classification">
           <Select>
@@ -132,17 +132,18 @@ describe('FilterBar', () => {
       </FilterBar>
     );
     expect(screen.getByText('Classification')).toBeVisible();
-    fireEvent.click(screen.getByText('Hide Filter Bar'));
-    expect(screen.getByText('Show Filter Bar')).toBeVisible();
-    expect(screen.getByText('Classification')).not.toBeVisible();
+
+    fireEvent.click(getByVisibleText('Hide Filter Bar'));
+    expect(getByVisibleText('Show Filter Bar')).toBeVisible();
+    expect(getByVisibleText('Classification')).not.toBeVisible();
 
     expect(asFragment()).toMatchSnapshot();
 
-    fireEvent.click(screen.getByText('Show Filter Bar'));
-    expect(screen.getByText('Hide Filter Bar')).toBeVisible();
-    expect(screen.getByText('Classification')).toBeVisible();
+    fireEvent.click(getByVisibleText('Show Filter Bar'));
+    expect(getByVisibleText('Hide Filter Bar')).toBeVisible();
+    expect(getByVisibleText('Classification')).toBeVisible();
 
-    fireEvent.click(screen.getByText('Hide Filter Bar'));
+    fireEvent.click(getByVisibleText('Hide Filter Bar'));
 
     rerender(
       <FilterBar useToolbar={false}>
@@ -156,7 +157,7 @@ describe('FilterBar', () => {
         </FilterGroupItem>
       </FilterBar>
     );
-    expect(screen.getByText('Classification')).toBeVisible();
+    expect(getByVisibleText('Classification')).toBeVisible();
     expect(screen.queryByText('Show Filter Bar')).toBeFalsy();
     expect(screen.queryByText('Hide Filter Bar')).toBeFalsy();
   });
@@ -269,7 +270,7 @@ describe('FilterBar', () => {
   });
 
   it('Group Filter Items mounted in Dialog', () => {
-    const { asFragment } = render(
+    const { getByVisibleText } = render(
       <FilterBar
         search={search}
         showClearOnFB={true}
@@ -297,7 +298,7 @@ describe('FilterBar', () => {
       { attachTo: document.body.appendChild(document.createElement('div')) }
     );
 
-    fireEvent.click(screen.getByText('Filters'));
+    fireEvent.click(getByVisibleText('Filters'));
 
     const [selectFilterBar, selectFilterDialog] = screen.getAllByText('SELECT');
     expect(selectFilterDialog).toHaveAttribute('required', 'true');
@@ -307,7 +308,7 @@ describe('FilterBar', () => {
   });
 
   it('Filter Dialog Search', () => {
-    render(
+    const { getByVisibleText } = render(
       <FilterBar showFilterConfiguration showSearchOnFiltersDialog>
         <FilterGroupItem label="Filter1" groupName="Group1">
           <Input placeholder="Placeholder" />
@@ -320,7 +321,7 @@ describe('FilterBar', () => {
         </FilterGroupItem>
       </FilterBar>
     );
-    const filterButton = screen.getByText('Filters');
+    const filterButton = getByVisibleText('Filters');
     fireEvent.click(filterButton);
     const searchField = screen.getByPlaceholderText('Search for Filters');
 
@@ -376,7 +377,7 @@ describe('FilterBar', () => {
     const onClear = jest.fn();
     const onGo = jest.fn();
     const onRestore = jest.fn();
-    const { rerender } = render(
+    const { rerender, getByVisibleText } = render(
       <FilterBar
         tooltip="FilterBar-Test"
         showFilterConfiguration
@@ -411,7 +412,7 @@ describe('FilterBar', () => {
       </FilterBar>
     );
 
-    const toggleButton = screen.getByText('Hide Filter Bar');
+    const toggleButton = getByVisibleText('Hide Filter Bar');
     const filterArea = screen.getByTitle('FilterBar-Test').children[1];
     expect(filterArea).toHaveClass('FilterBar-filterAreaOpen');
     fireEvent.click(toggleButton);
@@ -421,23 +422,23 @@ describe('FilterBar', () => {
     expect(onToggleFilters).toHaveBeenCalledTimes(2);
     expect(filterArea).toHaveClass('FilterBar-filterAreaOpen');
 
-    const clearButton = screen.getByText('Clear');
+    const clearButton = getByVisibleText('Clear');
     fireEvent.click(clearButton);
     expect(onClear).toHaveBeenCalledTimes(1);
 
-    const goButton = screen.getByText('Go');
+    const goButton = getByVisibleText('Go');
     fireEvent.click(goButton);
     expect(onGo).toHaveBeenCalledTimes(1);
 
-    const restoreButton = screen.getByText('Restore');
+    const restoreButton = getByVisibleText('Restore');
     fireEvent.click(restoreButton);
     expect(onRestore).toHaveBeenCalledTimes(1);
 
-    const filterButton = screen.getByText('Filters');
+    const filterButton = getByVisibleText('Filters');
     fireEvent.click(filterButton);
     expect(onFiltersDialogOpen).toHaveBeenCalledTimes(1);
 
-    const dialogClearButton = screen.getAllByText('Clear')[1];
+    const dialogClearButton = getByVisibleText('Clear');
     fireEvent.click(dialogClearButton);
     expect(onFiltersDialogClear).toHaveBeenCalledTimes(1);
 
