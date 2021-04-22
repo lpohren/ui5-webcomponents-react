@@ -19,7 +19,12 @@ const setupMatchMedia = () => {
   });
 };
 
-beforeEach(async () => {
+beforeAll(async () => {
+  jest.spyOn(window, 'requestAnimationFrame').mockImplementation((cb: any) => cb());
+
+  Object.defineProperty(window, 'innerWidth', { writable: true, configurable: true, value: 1366 });
+  Object.defineProperty(window, 'innerHeight', { writable: true, configurable: true, value: 768 });
+
   (window as any).ResizeObserver = ResizeObserver;
   window.scrollTo = jest.fn();
   setupMatchMedia();

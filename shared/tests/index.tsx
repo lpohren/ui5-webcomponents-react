@@ -1,6 +1,26 @@
-import { render, RenderOptions, RenderResult } from '@testing-library/react';
+import { buildQueries, getAllByText, queries, render, RenderOptions, RenderResult } from '@testing-library/react';
 import React, { ReactElement } from 'react';
 import { JssProvider } from 'react-jss';
+
+const queryAllByVisibleText = (container, text, options) => {
+  return getAllByText(
+    container,
+    (content, element) => {
+      if (text === 'Clear') debugger;
+      return content === text && getComputedStyle(element).visibility === 'visible';
+    },
+    options
+  );
+};
+
+const getMultipleError = (c, text) => `Found multiple visible elements with text: ${text}`;
+const getMissingError = (c, text) => `Unable to find a visible element text: ${text}`;
+
+const [queryByVisibleText, getAllVisibleText, getByVisibleText, findAllByVisibleText, findByVisibleText] = buildQueries(
+  queryAllByVisibleText,
+  getMultipleError,
+  getMissingError
+);
 
 const generateId = (rule, sheet) => {
   return `${sheet.options.classNamePrefix}${rule.key}`;
@@ -10,8 +30,19 @@ const WithJSSProvider = ({ children }) => {
   return <JssProvider generateId={generateId}>{children}</JssProvider>;
 };
 
-const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'queries'>): RenderResult =>
-  render(ui, { wrapper: WithJSSProvider, ...options });
+const customRender = (ui: ReactElement, options?: RenderOptions) =>
+  render(ui, {
+    wrapper: WithJSSProvider,
+    queries: {
+      ...queries,
+      queryByVisibleText,
+      getAllVisibleText,
+      getByVisibleText,
+      findAllByVisibleText,
+      findByVisibleText
+    },
+    ...options
+  });
 
 const RtlWrapper = ({ children }) => (
   <WithJSSProvider>
